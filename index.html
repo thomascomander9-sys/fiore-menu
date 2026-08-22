@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Fiore | قائمة رقمية فاخرة</title>
+
+<!-- Tailwind CSS — compiled locally and inlined below (see <style id="tailwind-build">).
+     We intentionally do NOT use <script src="https://cdn.tailwindcss.com">: that CDN
+     build is a runtime JIT compiler, so if the customer's phone can't reach it (blocked
+     CDN, firewall, flaky mobile data — common in some regions), it throws "tailwind is
+     not defined" and EVERY Tailwind class on the page (fixed, inset-0, flex, grid, w-full,
+     etc.) silently does nothing. Shipping a pre-built, self-contained stylesheet removes
+     that single point of failure entirely. -->
+<!-- Icons are inline SVG (no external icon font), so they always render
+     correctly even when a CDN is blocked or offline. -->
+<!-- Fonts: Cormorant Garamond (Latin display), Amiri (Arabic display), Cairo (Arabic UI).
+     These still load from Google Fonts, but that is safe: if they fail, the CSS below
+     already lists 'serif'/'sans-serif' fallbacks, so only the typography looks slightly
+     different — nothing breaks or becomes unusable. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style id="tailwind-build">
+*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.invisible{visibility:hidden}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.-right-1{right:-.25rem}.-top-1{top:-.25rem}.bottom-0{bottom:0}.bottom-6{bottom:1.5rem}.left-0{left:0}.left-1{left:.25rem}.left-1\.5{left:.375rem}.left-1\/2{left:50%}.right-0{right:0}.top-0{top:0}.top-1{top:.25rem}.top-1\.5{top:.375rem}.z-40{z-index:40}.z-\[100\]{z-index:100}.z-\[110\]{z-index:110}.z-\[90\]{z-index:90}.z-\[95\]{z-index:95}.mx-auto{margin-left:auto;margin-right:auto}.my-4{margin-top:1rem;margin-bottom:1rem}.-mt-0{margin-top:0}.-mt-0\.5{margin-top:-.125rem}.mb-1{margin-bottom:.25rem}.mb-1\.5{margin-bottom:.375rem}.mb-10{margin-bottom:2.5rem}.mb-14{margin-bottom:3.5rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-10{margin-top:2.5rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.block{display:block}.inline{display:inline}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.aspect-\[16\/9\]{aspect-ratio:16/9}.\!h-11{height:2.75rem!important}.\!h-9{height:2.25rem!important}.h-11{height:2.75rem}.h-12{height:3rem}.h-7{height:1.75rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-full{height:100%}.h-px{height:1px}.max-h-\[520px\]{max-height:520px}.min-h-screen{min-height:100vh}.\!w-11{width:2.75rem!important}.\!w-9{width:2.25rem!important}.w-11{width:2.75rem}.w-16{width:4rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.min-w-0{min-width:0}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-sm{max-width:24rem}.max-w-xs{max-width:20rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1{--tw-translate-x:-0.25rem}.-translate-x-1,.-translate-x-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-x-1\/2{--tw-translate-x:-50%}.translate-x-\[-100\%\]{--tw-translate-x:-100%}.transform,.translate-x-\[-100\%\]{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.scroll-mt-40{scroll-margin-top:10rem}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-gold-300{--tw-border-opacity:1;border-color:rgb(227 193 121/var(--tw-border-opacity,1))}.border-gold-300\/30{border-color:hsla(41,65%,68%,.3)}.border-gold-300\/40{border-color:hsla(41,65%,68%,.4)}.border-gold-300\/50{border-color:hsla(41,65%,68%,.5)}.border-gold-300\/60{border-color:hsla(41,65%,68%,.6)}.border-red-300{--tw-border-opacity:1;border-color:rgb(252 165 165/var(--tw-border-opacity,1))}.bg-\[\#3B2A17\]{--tw-bg-opacity:1;background-color:rgb(59 42 23/var(--tw-bg-opacity,1))}.bg-\[\#6B2B2B\]{--tw-bg-opacity:1;background-color:rgb(107 43 43/var(--tw-bg-opacity,1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity,1))}.bg-black\/50{background-color:rgba(0,0,0,.5)}.bg-cream{--tw-bg-opacity:1;background-color:rgb(251 245 233/var(--tw-bg-opacity,1))}.bg-cream\/85{background-color:hsla(40,69%,95%,.85)}.bg-gold-100{--tw-bg-opacity:1;background-color:rgb(246 231 193/var(--tw-bg-opacity,1))}.bg-gold-100\/40{background-color:hsla(43,75%,86%,.4)}.bg-gold-300{--tw-bg-opacity:1;background-color:rgb(227 193 121/var(--tw-bg-opacity,1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.bg-white\/50{background-color:hsla(0,0%,100%,.5)}.bg-white\/60{background-color:hsla(0,0%,100%,.6)}.bg-white\/90{background-color:hsla(0,0%,100%,.9)}.object-cover{-o-object-fit:cover;object-fit:cover}.p-3{padding:.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1{padding-left:.25rem;padding-right:.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-3{padding-bottom:.75rem}.pe-1{padding-inline-end:.25rem}.pt-1{padding-top:.25rem}.text-center{text-align:center}.text-right{text-align:right}.font-display{font-family:Cormorant Garamond,serif}.\!text-lg{font-size:1.125rem!important;line-height:1.75rem!important}.\!text-sm{font-size:.875rem!important;line-height:1.25rem!important}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[11px\]{font-size:11px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.lowercase{text-transform:lowercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-\[0\.35em\]{letter-spacing:.35em}.tracking-wide{letter-spacing:.025em}.text-\[\#3B2A17\]{--tw-text-opacity:1;color:rgb(59 42 23/var(--tw-text-opacity,1))}.text-cream{--tw-text-opacity:1;color:rgb(251 245 233/var(--tw-text-opacity,1))}.text-gold-500{--tw-text-opacity:1;color:rgb(180 130 59/var(--tw-text-opacity,1))}.text-gold-600{--tw-text-opacity:1;color:rgb(140 99 42/var(--tw-text-opacity,1))}.text-gold-700{--tw-text-opacity:1;color:rgb(107 75 31/var(--tw-text-opacity,1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.shadow-2xl,.shadow-gold{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-gold{--tw-shadow:0 10px 30px -10px rgba(140,99,42,.35);--tw-shadow-colored:0 10px 30px -10px var(--tw-shadow-color)}.outline-none{outline:2px solid transparent;outline-offset:2px}.blur{--tw-blur:blur(8px)}.blur,.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px)}.backdrop-blur,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.hover\:bg-black\/70:hover{background-color:rgba(0,0,0,.7)}.hover\:bg-gold-100\/40:hover{background-color:hsla(43,75%,86%,.4)}.hover\:bg-gold-100\/60:hover{background-color:hsla(43,75%,86%,.6)}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242/var(--tw-bg-opacity,1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:ring-gold-400:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(207 163 92/var(--tw-ring-opacity,1))}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-40:disabled{opacity:.4}@media (min-width:640px){.sm\:w-64{width:16rem}.sm\:w-\[420px\]{width:420px}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:gap-3{gap:.75rem}.sm\:p-6{padding:1.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-xs{font-size:.75rem;line-height:1rem}}@media (min-width:1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-\[1\.1fr_1\.4fr\]{grid-template-columns:1.1fr 1.4fr}}
+</style>
+
+<style>
+  :root{
+    --gold-grad: linear-gradient(135deg, #F6E7C1 0%, #CFA35C 45%, #8C632A 75%, #E3C179 100%);
+    --gold-grad-soft: linear-gradient(135deg, #EFD9A0 0%, #CFA35C 100%);
+  }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:'Cairo', sans-serif;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(239,217,160,0.35), transparent 40%),
+      radial-gradient(circle at 100% 20%, rgba(207,163,92,0.20), transparent 45%),
+      #FBF5E9;
+    color:#2E2115;
+  }
+  .font-display{ font-family:'Cormorant Garamond','Amiri', serif; }
+
+  /* Gold shimmer divider — the site's signature motif */
+  .gold-divider{
+    position:relative;
+    height:2px;
+    background:linear-gradient(90deg, transparent, #CFA35C 15%, #F6E7C1 50%, #CFA35C 85%, transparent);
+    overflow:hidden;
+  }
+  .gold-divider::after{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
+    width:40%;
+    animation: shimmer 3.5s ease-in-out infinite;
+  }
+  @keyframes shimmer{
+    0%{ transform:translateX(-150%); }
+    60%{ transform:translateX(280%); }
+    100%{ transform:translateX(280%); }
+  }
+
+  .monogram{
+    width:56px; height:56px; border-radius:9999px;
+    display:flex; align-items:center; justify-content:center;
+    background: var(--gold-grad);
+    box-shadow: 0 8px 20px -6px rgba(140,99,42,.55), inset 0 0 0 2px rgba(255,255,255,.35);
+    font-family:'Cormorant Garamond', serif;
+    color:#3B2A17; font-weight:600; font-size:1.6rem;
+  }
+
+  .card-frame{
+    background: linear-gradient(180deg, #FFFDF8 0%, #FBF3E1 100%);
+    border:1px solid rgba(180,130,59,.25);
+  }
+  .card-frame:hover{
+    box-shadow: 0 18px 40px -18px rgba(140,99,42,.45);
+    transform: translateY(-3px);
+  }
+
+  .btn-gold{
+    background: var(--gold-grad-soft);
+    color:#3B2A17;
+    transition: filter .2s ease, transform .15s ease;
+  }
+  .btn-gold:hover{ filter:brightness(1.06); }
+  .btn-gold:active{ transform:scale(.97); }
+
+  .tab-pill{
+    white-space:nowrap;
+    transition: all .25s ease;
+    border:1px solid rgba(180,130,59,.35);
+  }
+  .tab-pill.active{
+    background: var(--gold-grad-soft);
+    color:#3B2A17;
+    border-color:transparent;
+    box-shadow: 0 8px 18px -8px rgba(140,99,42,.55);
+  }
+
+  .cat-nav::-webkit-scrollbar{ height:0; }
+
+  .modal-backdrop{
+    background: radial-gradient(circle at 50% 20%, rgba(46,33,21,.55), rgba(20,14,8,.78));
+    backdrop-filter: blur(3px);
+  }
+  .modal-panel{
+    background: linear-gradient(180deg, #FFFDF9 0%, #F8EDD6 100%);
+    border:1px solid rgba(180,130,59,.35);
+  }
+
+  .fade-in{ animation: fadeIn .35s ease both; }
+  @keyframes fadeIn{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:translateY(0); } }
+
+  .cart-badge{
+    min-width:20px; height:20px;
+    font-size:.7rem;
+  }
+
+  .img-placeholder{
+    background:
+      repeating-linear-gradient(135deg, rgba(180,130,59,.10) 0px, rgba(180,130,59,.10) 10px, rgba(180,130,59,.04) 10px, rgba(180,130,59,.04) 20px),
+      #F4E9D2;
+  }
+
+  input[type="text"], input[type="password"], input[type="number"], input[type="url"], textarea, select{
+    background:#FFFDF9;
+  }
+  ::selection{ background:#E3C179; color:#3B2A17; }
+
+  /* Drawer */
+  .drawer{
+    transition: transform .35s cubic-bezier(.22,.9,.3,1);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .gold-divider::after{ animation:none; }
+    *{ transition:none !important; animation-duration:.001s !important; }
+  }
+
+  /* Inline SVG icon system — replaces icon fonts entirely */
+  .icon{
+    display:inline-block;
+    width:1em; height:1em;
+    vertical-align:-0.15em;
+    line-height:1;
+  }
+  .icon svg{
+    width:100%; height:100%;
+    display:block;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+
+  /* Bulletproof show/hide for anything toggled from JS.
+     Tailwind's own `.hidden` utility can lose to another display
+     utility (e.g. `.flex`) present on the same element depending on
+     CSS generation order, which silently breaks modals/badges that
+     combine a permanent "flex" with a toggled "hidden". `!important`
+     here guarantees this class always wins, in either direction. */
+  .js-hidden{ display:none !important; }
+</style>
+</head>
+
+<body class="min-h-screen">
+
+<!-- =========================================================
+     TABLE NUMBER MODAL (blocks the app until a table is set)
+========================================================= -->
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+<header class="sticky top-0 z-40 backdrop-blur bg-cream/85 border-b border-gold-300/40">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+
+    <!-- Controls cluster: placed FIRST in the markup so, in this RTL
+         layout, it sits at the top-RIGHT corner of the page — with the
+         hamburger itself as the very first (rightmost) element. -->
+    <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Hamburger menu -->
+      <div class="relative">
+        <button id="hamburgerBtn" class="w-11 h-11 rounded-full border border-gold-300/60 flex items-center justify-center hover:bg-gold-100/60 transition text-[#3B2A17]">
+          <span class="icon text-lg"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
+        </button>
+        <div id="hamburgerMenu" class="js-hidden absolute right-0 mt-2 w-48 modal-panel rounded-xl shadow-gold overflow-hidden fade-in">
+          <button id="adminMenuBtn" class="w-full text-right px-4 py-3 hover:bg-gold-100/60 text-sm flex items-center gap-2">
+            <span class="icon text-gold-600"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9.3 12l1.8 1.8L14.7 10"/></svg></span>
+            Admin
+          </button>
+        </div>
+      </div>
+
+      <!-- Cart button -->
+      <button id="cartBtn" class="relative w-11 h-11 rounded-full btn-gold flex items-center justify-center shadow-gold">
+        <span class="icon text-lg"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12a2 2 0 01-2 2H9a2 2 0 01-2-2L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></span>
+        <span id="cartCount" class="cart-badge js-hidden absolute -top-1 -right-1 bg-[#6B2B2B] text-white rounded-full flex items-center justify-center px-1">0</span>
+      </button>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <div class="monogram !w-11 !h-11 !text-lg">F</div>
+      <div>
+        <h1 class="font-display text-2xl sm:text-3xl leading-none tracking-wide text-[#3B2A17]">Fiore</h1>
+        <p class="text-[11px] sm:text-xs text-gold-600 -mt-0.5">قائمة رقمية فاخرة</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category navigation -->
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 pb-3">
+    <div id="categoryNav" class="cat-nav flex gap-2 overflow-x-auto no-scrollbar"></div>
+  </nav>
+</header>
+
+<!-- =========================================================
+     MAIN — MENU
+========================================================= -->
+<main class="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+  <div class="text-center mb-10 fade-in">
+    <p class="uppercase tracking-[0.35em] text-gold-600 text-xs mb-2">Fiore Café</p>
+    <h2 class="font-display text-4xl sm:text-5xl text-[#3B2A17]">قائمتنا الفاخرة</h2>
+    <div class="gold-divider max-w-xs mx-auto mt-4"></div>
+  </div>
+
+  <div id="menuSections"></div>
+</main>
+
+<footer class="text-center text-xs text-gold-600 py-8 border-t border-gold-300/40 mt-10">
+  <div class="monogram !w-9 !h-9 !text-sm mx-auto mb-2">F</div>
+  Fiore Café — تجربة فاخرة تليق بذوقكم
+</footer>
+
+<!-- =========================================================
+     CART DRAWER
+========================================================= -->
+<div id="cartOverlay" class="js-hidden fixed inset-0 z-[90] modal-backdrop"></div>
+<aside id="cartDrawer" class="drawer fixed top-0 bottom-0 left-0 w-full sm:w-[420px] z-[95] translate-x-[-100%] modal-panel shadow-2xl flex flex-col" style="transform:translateX(-100%);">
+  <div class="flex items-center justify-between px-5 py-4 border-b border-gold-300/40">
+    <h3 class="font-display text-2xl text-[#3B2A17] flex items-center gap-2">
+      <span class="icon text-gold-500"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12a2 2 0 01-2 2H9a2 2 0 01-2-2L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></svg></span>
+      سلة الطلبات
+    </h3>
+    <button id="closeCartBtn" class="w-9 h-9 rounded-full hover:bg-gold-100/60 flex items-center justify-center">
+      <span class="icon"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+    </button>
+  </div>
+
+  <div id="cartItems" class="flex-1 overflow-y-auto px-5 py-4 space-y-3"></div>
+
+  <div class="border-t border-gold-300/40 px-5 py-4 space-y-3">
+    <div>
+      <label for="cartTableInput" class="block text-sm text-gold-700 mb-1.5">رقم الطاولة</label>
+      <select id="cartTableInput"
+              class="w-full text-center text-lg rounded-xl border border-gold-300 px-4 py-2.5 outline-none focus:ring-2 focus:ring-gold-400 transition bg-white/90 appearance-none">
+        <option value="" selected>اختر رقم الطاولة</option>
+      </select>
+      <p id="cartTableError" class="text-red-600 text-xs mt-1.5 js-hidden">الرجاء اختيار رقم الطاولة قبل إرسال الطلب</p>
+    </div>
+    <div class="flex items-center justify-between text-lg font-bold text-[#3B2A17]">
+      <span>الإجمالي</span>
+      <span><span id="cartTotal">0</span> ل.س</span>
+    </div>
+    <button id="checkoutBtn" class="btn-gold w-full rounded-xl py-3 font-semibold text-lg flex items-center justify-center gap-2 shadow-gold disabled:opacity-40 disabled:cursor-not-allowed">
+      <span class="icon text-xl"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 00-7.75 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M8.7 9.3c.2 3 2.6 5.4 5.6 5.6"/></svg></span>
+      إرسال الطلب عبر واتساب
+    </button>
+  </div>
+</aside>
+
+<!-- =========================================================
+     ADMIN — LOGIN MODAL
+========================================================= -->
+<div id="adminLoginModal" class="js-hidden fixed inset-0 z-[100] flex items-center justify-center p-4 modal-backdrop">
+  <div class="modal-panel w-full max-w-sm rounded-2xl shadow-gold p-8 text-center fade-in">
+    <span class="icon text-4xl text-gold-500 mb-3"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9.3 12l1.8 1.8L14.7 10"/></svg></span>
+    <h2 class="font-display text-2xl mb-1 text-[#3B2A17]">دخول لوحة التحكم</h2>
+    <p class="text-xs text-gold-600 mb-5">هذه المنطقة مخصصة لإدارة الكافيه فقط</p>
+    <form id="adminLoginForm" novalidate>
+      <input id="adminPasswordInput" type="password" required autocomplete="off" placeholder="كلمة المرور"
+             class="w-full text-center rounded-xl border border-gold-300 px-4 py-3 mb-2 outline-none focus:ring-2 focus:ring-gold-400 transition">
+      <p id="adminError" class="text-red-600 text-xs mb-3 js-hidden">كلمة المرور غير صحيحة</p>
+      <div class="flex gap-2 mt-3">
+        <button type="button" id="adminCancelBtn" class="flex-1 rounded-xl py-3 border border-gold-300 text-sm hover:bg-gold-100/60">إلغاء</button>
+        <button type="submit" class="flex-1 btn-gold rounded-xl py-3 font-semibold">دخول</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- =========================================================
+     ADMIN — DASHBOARD MODAL
+========================================================= -->
+<div id="adminPanel" class="js-hidden fixed inset-0 z-[100] p-3 sm:p-6 modal-backdrop overflow-y-auto">
+  <div class="modal-panel w-full max-w-5xl mx-auto rounded-2xl shadow-gold my-4 fade-in">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-gold-300/40">
+      <h2 class="font-display text-2xl sm:text-3xl text-[#3B2A17] flex items-center gap-2">
+        <span class="icon text-gold-500"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3z"/><path d="M9.3 12l1.8 1.8L14.7 10"/></svg></span>
+        لوحة تحكم Fiore
+      </h2>
+      <button id="closeAdminBtn" class="w-9 h-9 rounded-full hover:bg-gold-100/60 flex items-center justify-center">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+      </button>
+    </div>
+
+    <div class="p-6 grid lg:grid-cols-[1.1fr_1.4fr] gap-6">
+      <!-- Add / Edit item form -->
+      <div>
+        <h3 class="font-display text-xl mb-3 text-[#3B2A17]" id="itemFormTitle">إضافة عنصر جديد</h3>
+        <form id="itemForm" class="space-y-3 bg-white/50 border border-gold-300/40 rounded-xl p-4">
+          <input type="hidden" id="itemFormId">
+          <div>
+            <label class="block text-xs mb-1 text-gold-700">اسم الصنف</label>
+            <input id="itemFormName" type="text" required class="w-full rounded-lg border border-gold-300 px-3 py-2 outline-none focus:ring-2 focus:ring-gold-400">
+          </div>
+          <div>
+            <label class="block text-xs mb-1 text-gold-700">السعر (ل.س)</label>
+            <input id="itemFormPrice" type="number" min="0" step="1" required class="w-full rounded-lg border border-gold-300 px-3 py-2 outline-none focus:ring-2 focus:ring-gold-400">
+          </div>
+          <div>
+            <label class="block text-xs mb-1 text-gold-700">التصنيف</label>
+            <select id="itemFormCategory" class="w-full rounded-lg border border-gold-300 px-3 py-2 outline-none focus:ring-2 focus:ring-gold-400"></select>
+          </div>
+          <div>
+            <label class="block text-xs mb-1 text-gold-700">صورة الصنف (Landscape) — رفع من الجهاز</label>
+            <input type="hidden" id="itemFormImage">
+            <label for="itemFormImageFile" class="flex flex-col items-center justify-center gap-1.5 w-full border-2 border-dashed border-gold-300 rounded-lg py-5 cursor-pointer hover:bg-gold-100/40 transition text-gold-600">
+              <span class="icon text-2xl"><svg viewBox="0 0 24 24"><path d="M12 16V4M12 4l-4 4M12 4l4 4"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/></svg></span>
+              <span class="text-xs" id="itemFormImageLabel">اضغط لرفع صورة (JPG / PNG)</span>
+            </label>
+            <input id="itemFormImageFile" type="file" accept="image/*" class="js-hidden">
+            <div id="itemFormImagePreviewWrap" class="js-hidden mt-2 relative">
+              <img id="itemFormImagePreview" class="w-full aspect-[16/9] object-cover rounded-lg border border-gold-300/50">
+              <button type="button" id="itemFormImageRemoveBtn" class="absolute top-1.5 left-1.5 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70">
+                <span class="icon text-xs"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+              </button>
+            </div>
+          </div>
+          <div class="flex gap-2 pt-1">
+            <button type="button" id="itemFormResetBtn" class="flex-1 rounded-lg py-2.5 border border-gold-300 text-sm hover:bg-gold-100/60">إلغاء التعديل</button>
+            <button type="submit" class="flex-1 btn-gold rounded-lg py-2.5 font-semibold text-sm flex items-center justify-center gap-1.5">
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5V4z"/><path d="M8 4v5h7V4M8 14h8v6H8z"/></svg></span>
+              حفظ
+            </button>
+          </div>
+        </form>
+
+        <div class="mt-4 bg-gold-100/40 border border-gold-300/40 rounded-xl p-4 text-xs text-gold-700 leading-relaxed">
+          <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="8" r="0.9" fill="currentColor" stroke="none"/></svg></span>
+          هذه اللوحة متصلة بقاعدة بيانات Firebase Firestore — أي إضافة أو تعديل أو حذف لصنف يُحفظ مباشرة على
+          السحابة ويظهر لكل الزبائن فوراً عند تحديث الصفحة. الصور تُصغَّر وتُضغط تلقائياً قبل الحفظ لتبقى ضمن الخطة
+          المجانية — إذا احتجت لاحقاً صوراً بجودة أعلى أو عدد أصناف كبير جداً، يمكن الانتقال إلى
+          <code class="bg-white/60 px-1 rounded">Firebase Storage</code> (يتطلب ترقية خطة الفوترة).
+        </div>
+      </div>
+
+      <!-- Items list -->
+      <div>
+        <h3 class="font-display text-xl mb-3 text-[#3B2A17]">عناصر القائمة</h3>
+        <div class="mb-3">
+          <select id="adminCategoryFilter" class="w-full sm:w-64 rounded-lg border border-gold-300 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-gold-400"></select>
+        </div>
+        <div id="adminItemsList" class="space-y-2 max-h-[520px] overflow-y-auto pe-1"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+<div id="toast" class="js-hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-[110] bg-[#3B2A17] text-cream px-5 py-3 rounded-full text-sm shadow-gold fade-in">
+  تمت الإضافة إلى السلة
+</div>
+
+<style>
+  .no-scrollbar::-webkit-scrollbar{ display:none; }
+  .no-scrollbar{ -ms-overflow-style:none; scrollbar-width:none; }
+</style>
+
+<script type="module">
+/* =====================================================================
+   FIORE — DIGITAL MENU
+   -----------------------------------------------------------------
+   DATA / BACKEND LAYER — now backed by Firebase Firestore.
+   Everything menu-related is read and written through the MenuAPI
+   object below. Every call site in this file already `await`s these
+   methods, so nothing else needed to change when we swapped the old
+   in-memory array for real Firestore calls.
+
+   NOTE: this <script> tag was switched to type="module" so we can use
+   ES-module `import` for the Firebase SDK (loaded from Google's CDN,
+   no npm/build step required).
+===================================================================== */
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import {
+  getFirestore, collection, getDocs, addDoc, doc, updateDoc,
+  deleteDoc, setDoc, writeBatch
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCUNnE5_drtkgU5PGJYhjIw2JE32dusnoI",
+  authDomain: "fiore-a7bda.firebaseapp.com",
+  projectId: "fiore-a7bda",
+  storageBucket: "fiore-a7bda.firebasestorage.app",
+  messagingSenderId: "808739094385",
+  appId: "1:808739094385:web:bd0f773813d5287281c0d0",
+};
+
+const fbApp = initializeApp(firebaseConfig);
+const db = getFirestore(fbApp);
+const menuItemsCol = collection(db, "menuItems");
+
+// Images are stored as compressed Base64 data URLs directly inside the
+// Firestore document (no Firebase Storage — that tier needs a paid
+// "Blaze" plan). To stay well under Firestore's 1MB-per-document limit
+// and keep the menu loading fast, every uploaded image is resized down
+// and re-compressed as a JPEG before it's saved.
+function compressImageFile(file, maxDim = 900, quality = 0.72){
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error('تعذّرت قراءة الملف'));
+    reader.onload = () => {
+      img.onerror = () => reject(new Error('تعذّرت معالجة الصورة'));
+      img.onload = () => {
+        let { width, height } = img;
+        if (width > maxDim || height > maxDim) {
+          const scale = maxDim / Math.max(width, height);
+          width = Math.round(width * scale);
+          height = Math.round(height * scale);
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+
+// Inline SVG icon set — used instead of an icon font so icons never
+// break due to a blocked/slow CDN. Each entry is the inner markup of
+// an <svg viewBox="0 0 24 24"> (stroke styling comes from the shared
+// .icon CSS class).
+const ICONS = {
+  cake:      '<path d="M4 20h16v-6a4 4 0 00-4-4H8a4 4 0 00-4 4v6z"/><path d="M9 10V6M12 10V6M15 10V6"/><circle cx="9" cy="4.5" r="0.8" fill="currentColor" stroke="none"/><circle cx="12" cy="4.5" r="0.8" fill="currentColor" stroke="none"/><circle cx="15" cy="4.5" r="0.8" fill="currentColor" stroke="none"/>',
+  juice:     '<path d="M7 4h10l-1.2 14a2 2 0 01-2 1.8h-3.6a2 2 0 01-2-1.8L7 4z"/><path d="M7.5 8h9"/><path d="M14.5 2l2 3.5"/>',
+  mug:       '<path d="M4 8h11v7a4 4 0 01-4 4H8a4 4 0 01-4-4V8z"/><path d="M15 9.5h1.5a2 2 0 010 4H15"/><path d="M7.5 3c0 1-1 1-1 2M11.5 3c0 1-1 1-1 2"/>',
+  sandwich:  '<path d="M3 12.5l9-7.5 9 7.5"/><path d="M4 12.5h16v2.5a4 4 0 01-4 4H8a4 4 0 01-4-4v-2.5z"/>',
+  bowl:      '<path d="M3 11h18a9 9 0 01-18 0z"/><path d="M12 11V6"/>',
+  shisha:    '<circle cx="9" cy="16.5" r="3"/><path d="M9 13.5V8a3 3 0 013-3"/><path d="M12 4.3c.7.9 1.8.9 2.5 0M13.2 2.3c.5.7 1.3.7 1.8 0"/>',
+  plus:      '<path d="M12 5v14M5 12h14"/>',
+  pen:       '<path d="M4 20l4-1 10-10-3-3L5 16l-1 4z"/>',
+  trash:     '<path d="M5 7h14M9 7V5a1 1 0 011-1h4a1 1 0 011 1v2M7 7l1 13h8l1-13"/>',
+  image:     '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-3-3-6 6"/>',
+  bag:       '<path d="M6 8h12l-1 12a2 2 0 01-2 2H9a2 2 0 01-2-2L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/>',
+  cold:      '<path d="M6 3h12l-1.2 16a2 2 0 01-2 1.8h-5.6a2 2 0 01-2-1.8L6 3z"/><path d="M6.5 8h11"/><path d="M9 11l1.5 1.5M9 12.5L10.5 11M14 14l1.5 1.5M14 15.5L15.5 14"/>',
+};
+function icon(name, cls = ''){
+  return `<span class="icon ${cls}"><svg viewBox="0 0 24 24">${ICONS[name] || ''}</svg></span>`;
+}
+
+const CONFIG = {
+  // Cafe name in lowercase is the admin password, per requirements.
+  ADMIN_PASSWORD: 'fiore',
+  // Number of tables shown in the table-number dropdown (1..N).
+  TABLE_COUNT: 35,
+  // WhatsApp number that receives orders, in full international
+  // format (no leading 0, no "+", no spaces). The number supplied
+  // was 0936824892 (Syrian mobile format), so the country code 963
+  // has been prefixed here — update if a different country code
+  // is intended.
+  WHATSAPP_NUMBER: '963936824892',
+};
+
+const CATEGORIES = [
+  { id: 'desserts',   name: 'حلويات',         icon: 'cake' },
+  { id: 'juices',     name: 'عصائر',          icon: 'juice' },
+  { id: 'hot-drinks', name: 'مشروبات ساخنة',  icon: 'mug' },
+  { id: 'cold-drinks', name: 'مشروبات باردة', icon: 'cold' },
+  { id: 'sandwiches', name: 'سندويشات',       icon: 'sandwich' },
+  { id: 'salads',     name: 'سلطات',          icon: 'bowl' },
+  { id: 'shisha',     name: 'أراكيل',         icon: 'shisha' },
+];
+
+// Seed data reflecting the cafe's real menu. `image` is intentionally
+// left empty — no placeholder photos are generated, per requirements.
+// Staff add real photo URLs from the admin panel.
+let MENU_ITEMS = [
+  // ---------- حلويات (500 each) ----------
+  { id: 'd1', category: 'desserts', name: 'براونيز',        price: 500, image: '' },
+  { id: 'd2', category: 'desserts', name: 'فوندان',         price: 500, image: '' },
+  { id: 'd3', category: 'desserts', name: 'كريب كراميل',    price: 500, image: '' },
+  { id: 'd4', category: 'desserts', name: 'تشيز كيك',       price: 500, image: '' },
+  { id: 'd5', category: 'desserts', name: 'بابل فيوري',     price: 500, image: '' },
+
+  // ---------- عصائر (240 each) ----------
+  { id: 'j1',  category: 'juices', name: 'عصير برتقال',   price: 240, image: '' },
+  { id: 'j2',  category: 'juices', name: 'عصير أناناس',   price: 240, image: '' },
+  { id: 'j3',  category: 'juices', name: 'عصير مانجا',    price: 240, image: '' },
+  { id: 'j4',  category: 'juices', name: 'عصير تفاح',     price: 240, image: '' },
+  { id: 'j5',  category: 'juices', name: 'عصير جزر',      price: 240, image: '' },
+  { id: 'j6',  category: 'juices', name: 'عصير توت',      price: 240, image: '' },
+  { id: 'j7',  category: 'juices', name: 'عصير رمان',     price: 240, image: '' },
+  { id: 'j8',  category: 'juices', name: 'ليموناضة',      price: 240, image: '' },
+  { id: 'j9',  category: 'juices', name: 'عصير جبس',      price: 240, image: '' },
+  { id: 'j10', category: 'juices', name: 'عصير دراق',     price: 240, image: '' },
+  { id: 'j11', category: 'juices', name: 'عصير بولو',     price: 240, image: '' },
+
+  // ---------- مشروبات ساخنة ----------
+  { id: 'h1',  category: 'hot-drinks', name: 'قهوة تركي',        price: 170, image: '' },
+  { id: 'h2',  category: 'hot-drinks', name: 'إسبريسو',          price: 170, image: '' },
+  { id: 'h3',  category: 'hot-drinks', name: 'شاي',              price: 150, image: '' },
+  { id: 'h4',  category: 'hot-drinks', name: 'زهورات',           price: 150, image: '' },
+  { id: 'h5',  category: 'hot-drinks', name: 'كمون وليمون',      price: 160, image: '' },
+  { id: 'h6',  category: 'hot-drinks', name: '3 بـ 1',           price: 180, image: '' },
+  { id: 'h7',  category: 'hot-drinks', name: '2 بـ 1',           price: 180, image: '' },
+  { id: 'h8',  category: 'hot-drinks', name: 'نسكافيه دبل بلاك', price: 180, image: '' },
+  { id: 'h9',  category: 'hot-drinks', name: 'هوت شوكولا',       price: 200, image: '' },
+  { id: 'h10', category: 'hot-drinks', name: 'نسكافيه بحليب',    price: 200, image: '' },
+  { id: 'h11', category: 'hot-drinks', name: 'ميلو',             price: 200, image: '' },
+  { id: 'h12', category: 'hot-drinks', name: 'كافي موكا',        price: 200, image: '' },
+  { id: 'h13', category: 'hot-drinks', name: 'كافي لاتيه',       price: 200, image: '' },
+  { id: 'h14', category: 'hot-drinks', name: 'هوت لوتس',         price: 270, image: '' },
+  { id: 'h15', category: 'hot-drinks', name: 'متة',              price: 150, image: '' },
+
+  // ---------- مشروبات باردة (فاضي — تُضاف من لوحة الإدارة) ----------
+
+  // ---------- سندويشات ----------
+  { id: 's1', category: 'sandwiches', name: 'سندويش حبش',          price: 300, image: '' },
+  { id: 's2', category: 'sandwiches', name: 'سندويش جبنة',         price: 250, image: '' },
+  { id: 's3', category: 'sandwiches', name: 'سندويش تريبل تشيز',   price: 300, image: '' },
+  { id: 's4', category: 'sandwiches', name: 'سندويش مرتديلا',      price: 300, image: '' },
+  { id: 's5', category: 'sandwiches', name: 'سندويش طون',          price: 300, image: '' },
+  { id: 's6', category: 'sandwiches', name: 'حمص بيروتي',          price: 350, image: '' },
+
+  // ---------- سلطات (350 each) ----------
+  { id: 'sl1', category: 'salads', name: 'سلطة باستا',  price: 350, image: '' },
+  { id: 'sl2', category: 'salads', name: 'سلطة ذرة',    price: 350, image: '' },
+  { id: 'sl3', category: 'salads', name: 'سلطة طون',    price: 350, image: '' },
+  { id: 'sl4', category: 'salads', name: 'سلطة تبولة',  price: 350, image: '' },
+
+  // ---------- أراكيل ----------
+  { id: 'sh1', category: 'shisha', name: 'أركيلة تفاحتين', price: 200, image: '' },
+  { id: 'sh2', category: 'shisha', name: 'أركيلة بولو',    price: 200, image: '' },
+  { id: 'sh3', category: 'shisha', name: 'أركيلة عنب',     price: 200, image: '' },
+  { id: 'sh4', category: 'shisha', name: 'أركيلة علكة',    price: 200, image: '' },
+  { id: 'sh5', category: 'shisha', name: 'أركيلة لوف',     price: 200, image: '' },
+  { id: 'sh6', category: 'shisha', name: 'أركيلة تفاحة',   price: 230, image: '' },
+  { id: 'sh7', category: 'shisha', name: 'خدمة أركيلة',    price: 130, image: '' },
+  { id: 'sh8', category: 'shisha', name: 'نفس صحي',        price: 100, image: '' },
+];
+
+/* ---------------------------------------------------------------
+   MenuAPI — backed by Firestore (collection: "menuItems").
+   The very first time the app runs against an empty collection, it
+   migrates the local MENU_ITEMS seed array into Firestore (one-time
+   only — once documents exist, this migration step is skipped on
+   every future load).
+------------------------------------------------------------------ */
+let seedCheckDone = false;
+
+async function seedFirestoreIfEmpty() {
+  if (seedCheckDone) return;
+  seedCheckDone = true;
+  const snap = await getDocs(menuItemsCol);
+  if (!snap.empty) return; // already has data — never overwrite
+  const batch = writeBatch(db);
+  MENU_ITEMS.forEach(item => {
+    const { id, ...rest } = item;
+    batch.set(doc(menuItemsCol, id), rest);
+  });
+  await batch.commit();
+}
+
+const MenuAPI = {
+  async getItems() {
+    await seedFirestoreIfEmpty();
+    const snap = await getDocs(menuItemsCol);
+    return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  },
+  async addItem(item) {
+    const ref = await addDoc(menuItemsCol, item);
+    return { id: ref.id, ...item };
+  },
+  async updateItem(id, patch) {
+    await updateDoc(doc(menuItemsCol, id), patch);
+    return { id, ...patch };
+  },
+  async deleteItem(id) {
+    await deleteDoc(doc(menuItemsCol, id));
+    return true;
+  },
+  // Order submission hook — currently a no-op because checkout is
+  // handled entirely through the WhatsApp deep link. If order history
+  // is needed later, this is the place to write an "orders" document
+  // (table number, items, total, timestamp) before/after opening WhatsApp.
+  async submitOrder(order) {
+    console.log('Order ready for backend persistence:', order);
+    return true;
+  },
+};
+
+/* ---------------------------------------------------------------
+   STATE
+------------------------------------------------------------------ */
+let activeCategory = CATEGORIES[0].id;
+let cart = {};      // { itemId: qty }
+let editingItemId = null;
+
+/* ---------------------------------------------------------------
+   HELPERS
+------------------------------------------------------------------ */
+function formatPrice(n){ return Number(n).toLocaleString('ar-SY'); }
+
+function showToast(message){
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.remove('js-hidden');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.add('js-hidden'), 1800);
+}
+
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, s => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'
+  }[s]));
+}
+
+/* ---------------------------------------------------------------
+   TABLE NUMBER — chosen inside the cart, right before checkout
+   (no more start-of-visit modal; the customer can browse the menu
+   freely and only needs to pick a table when they're ready to send
+   the order on WhatsApp).
+------------------------------------------------------------------ */
+const cartTableInput = document.getElementById('cartTableInput');
+const cartTableError = document.getElementById('cartTableError');
+
+function populateTableOptions(){
+  let opts = '<option value="" selected>اختر رقم الطاولة</option>';
+  for (let i = 1; i <= CONFIG.TABLE_COUNT; i++) {
+    opts += `<option value="${i}">طاولة رقم ${i}</option>`;
+  }
+  cartTableInput.innerHTML = opts;
+}
+populateTableOptions();
+
+// Clear the inline error as soon as the customer picks a value.
+cartTableInput.addEventListener('change', () => {
+  if (cartTableInput.value) cartTableError.classList.add('js-hidden');
+});
+
+/* ---------------------------------------------------------------
+   HAMBURGER MENU
+------------------------------------------------------------------ */
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const hamburgerMenu = document.getElementById('hamburgerMenu');
+
+hamburgerBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  hamburgerMenu.classList.toggle('js-hidden');
+});
+document.addEventListener('click', (e) => {
+  if (!hamburgerMenu.contains(e.target) && e.target !== hamburgerBtn) {
+    hamburgerMenu.classList.add('js-hidden');
+  }
+});
+
+/* ---------------------------------------------------------------
+   CATEGORY NAVIGATION + MENU RENDERING
+------------------------------------------------------------------ */
+const categoryNav = document.getElementById('categoryNav');
+const menuSections = document.getElementById('menuSections');
+
+function renderCategoryNav(){
+  categoryNav.innerHTML = CATEGORIES.map(cat => `
+    <button data-cat="${cat.id}"
+      class="tab-pill ${cat.id === activeCategory ? 'active' : 'bg-white/60 text-[#3B2A17]'} rounded-full px-4 py-2 text-sm font-medium flex items-center gap-2">
+      ${icon(cat.icon)} ${cat.name}
+    </button>
+  `).join('');
+
+  categoryNav.querySelectorAll('[data-cat]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.cat;
+      renderCategoryNav();
+      const target = document.getElementById('section-' + activeCategory);
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
+function itemCardHtml(item){
+  const img = item.image
+    ? `<img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" class="w-full h-full object-cover">`
+    : `<div class="img-placeholder w-full h-full flex flex-col items-center justify-center text-gold-500">
+         ${icon('image', 'text-3xl mb-1')}
+         <span class="text-[11px] text-gold-600">بانتظار الصورة</span>
+       </div>`;
+
+  return `
+    <div class="card-frame rounded-2xl overflow-hidden transition-all duration-300">
+      <div class="w-full aspect-[16/9] overflow-hidden">${img}</div>
+      <div class="p-4 flex items-center justify-between gap-3">
+        <div>
+          <h4 class="font-display text-xl text-[#3B2A17] leading-tight">${escapeHtml(item.name)}</h4>
+          <p class="text-gold-600 font-semibold mt-1">${formatPrice(item.price)} ل.س</p>
+        </div>
+        <button data-add="${item.id}" class="btn-gold shrink-0 rounded-full px-4 py-2 text-sm font-semibold flex items-center gap-1.5 shadow-gold">
+          ${icon('plus')} أضف
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+async function renderMenu(){
+  const items = await MenuAPI.getItems();
+  menuSections.innerHTML = CATEGORIES.map(cat => {
+    const catItems = items.filter(i => i.category === cat.id);
+    if (catItems.length === 0) return '';
+    return `
+      <section id="section-${cat.id}" class="mb-14 scroll-mt-40">
+        <div class="flex items-center gap-3 mb-5">
+          ${icon(cat.icon, 'text-gold-500 text-xl')}
+          <h3 class="font-display text-3xl text-[#3B2A17]">${cat.name}</h3>
+          <div class="gold-divider flex-1"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          ${catItems.map(itemCardHtml).join('')}
+        </div>
+      </section>
+    `;
+  }).join('');
+
+  menuSections.querySelectorAll('[data-add]').forEach(btn => {
+    btn.addEventListener('click', () => addToCart(btn.dataset.add));
+  });
+}
+
+/* ---------------------------------------------------------------
+   CART
+------------------------------------------------------------------ */
+const cartOverlay = document.getElementById('cartOverlay');
+const cartDrawer = document.getElementById('cartDrawer');
+const cartItemsEl = document.getElementById('cartItems');
+const cartTotalEl = document.getElementById('cartTotal');
+const cartCountEl = document.getElementById('cartCount');
+const checkoutBtn = document.getElementById('checkoutBtn');
+
+async function addToCart(itemId){
+  cart[itemId] = (cart[itemId] || 0) + 1;
+  await renderCart();
+  showToast('تمت الإضافة إلى السلة');
+}
+
+function openCart(){
+  cartOverlay.classList.remove('js-hidden');
+  cartDrawer.style.transform = 'translateX(0)';
+}
+function closeCart(){
+  cartOverlay.classList.add('js-hidden');
+  cartDrawer.style.transform = 'translateX(-100%)';
+}
+
+document.getElementById('cartBtn').addEventListener('click', openCart);
+document.getElementById('closeCartBtn').addEventListener('click', closeCart);
+cartOverlay.addEventListener('click', closeCart);
+
+async function renderCart(){
+  const items = await MenuAPI.getItems();
+  const byId = Object.fromEntries(items.map(i => [i.id, i]));
+  const entries = Object.entries(cart).filter(([, qty]) => qty > 0);
+
+  let total = 0;
+  let count = 0;
+
+  if (entries.length === 0) {
+    cartItemsEl.innerHTML = `
+      <div class="h-full flex flex-col items-center justify-center text-center text-gold-500 py-16">
+        ${icon('bag', 'text-4xl mb-3')}
+        <p class="text-sm">سلتك فارغة حتى الآن</p>
+      </div>`;
+  } else {
+    cartItemsEl.innerHTML = entries.map(([id, qty]) => {
+      const item = byId[id];
+      if (!item) return '';
+      const lineTotal = item.price * qty;
+      total += lineTotal;
+      count += qty;
+      return `
+        <div class="flex items-center gap-3 bg-white/50 border border-gold-300/30 rounded-xl p-3">
+          <div class="flex-1">
+            <p class="font-semibold text-[#3B2A17]">${escapeHtml(item.name)}</p>
+            <p class="text-xs text-gold-600">${formatPrice(item.price)} ل.س × ${qty} = ${formatPrice(lineTotal)} ل.س</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button data-dec="${id}" class="w-7 h-7 rounded-full border border-gold-300 flex items-center justify-center hover:bg-gold-100/60">-</button>
+            <span class="w-5 text-center text-sm">${qty}</span>
+            <button data-inc="${id}" class="w-7 h-7 rounded-full border border-gold-300 flex items-center justify-center hover:bg-gold-100/60">+</button>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  cartTotalEl.textContent = formatPrice(total);
+
+  if (count > 0) {
+    cartCountEl.textContent = count;
+    cartCountEl.classList.remove('js-hidden');
+  } else {
+    cartCountEl.classList.add('js-hidden');
+  }
+
+  checkoutBtn.disabled = entries.length === 0;
+
+  cartItemsEl.querySelectorAll('[data-inc]').forEach(btn =>
+    btn.addEventListener('click', () => { cart[btn.dataset.inc]++; renderCart(); }));
+  cartItemsEl.querySelectorAll('[data-dec]').forEach(btn =>
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.dec;
+      cart[id] = Math.max(0, (cart[id] || 0) - 1);
+      renderCart();
+    }));
+}
+
+/* ---------------------------------------------------------------
+   WHATSAPP CHECKOUT
+------------------------------------------------------------------ */
+checkoutBtn.addEventListener('click', async () => {
+  const items = await MenuAPI.getItems();
+  const byId = Object.fromEntries(items.map(i => [i.id, i]));
+  const entries = Object.entries(cart).filter(([, qty]) => qty > 0);
+  if (entries.length === 0) return;
+
+  const tableNumber = cartTableInput.value.trim();
+  if (!tableNumber) {
+    cartTableError.classList.remove('js-hidden');
+    cartTableInput.focus();
+    return;
+  }
+  cartTableError.classList.add('js-hidden');
+
+  let total = 0;
+  const lines = entries.map(([id, qty]) => {
+    const item = byId[id];
+    const lineTotal = item.price * qty;
+    total += lineTotal;
+    return `• ${item.name}  ×${qty}  —  ${formatPrice(lineTotal)} ل.س`;
+  });
+
+  const message =
+`✨ طلب جديد من Fiore ✨
+🪑 رقم الطاولة: ${tableNumber}
+---------------------------
+${lines.join('\n')}
+---------------------------
+💰 الإجمالي: ${formatPrice(total)} ل.س`;
+
+  await MenuAPI.submitOrder({
+    table: tableNumber,
+    items: entries.map(([id, qty]) => ({ id, name: byId[id].name, price: byId[id].price, qty })),
+    total,
+    createdAt: new Date().toISOString(),
+  });
+
+  const url = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+
+  cart = {};
+  cartTableInput.value = '';
+  await renderCart();
+  closeCart();
+});
+
+/* ---------------------------------------------------------------
+   ADMIN — LOGIN
+------------------------------------------------------------------ */
+const adminLoginModal = document.getElementById('adminLoginModal');
+const adminLoginForm = document.getElementById('adminLoginForm');
+const adminPasswordInput = document.getElementById('adminPasswordInput');
+const adminError = document.getElementById('adminError');
+const adminPanel = document.getElementById('adminPanel');
+
+document.getElementById('adminMenuBtn').addEventListener('click', () => {
+  hamburgerMenu.classList.add('js-hidden');
+  adminPasswordInput.value = '';
+  adminError.classList.add('js-hidden');
+  adminLoginModal.classList.remove('js-hidden');
+  adminPasswordInput.focus();
+});
+document.getElementById('adminCancelBtn').addEventListener('click', () => {
+  adminLoginModal.classList.add('js-hidden');
+});
+adminLoginForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (adminPasswordInput.value.trim() === CONFIG.ADMIN_PASSWORD) {
+    adminLoginModal.classList.add('js-hidden');
+    await openAdminPanel();
+  } else {
+    adminError.classList.remove('js-hidden');
+  }
+});
+document.getElementById('closeAdminBtn').addEventListener('click', () => {
+  adminPanel.classList.add('js-hidden');
+});
+
+/* ---------------------------------------------------------------
+   ADMIN — DASHBOARD (Add / Edit / Delete)
+------------------------------------------------------------------ */
+const itemForm = document.getElementById('itemForm');
+const itemFormTitle = document.getElementById('itemFormTitle');
+const itemFormId = document.getElementById('itemFormId');
+const itemFormName = document.getElementById('itemFormName');
+const itemFormPrice = document.getElementById('itemFormPrice');
+const itemFormCategory = document.getElementById('itemFormCategory');
+const itemFormImage = document.getElementById('itemFormImage');
+const itemFormImageFile = document.getElementById('itemFormImageFile');
+const itemFormImageLabel = document.getElementById('itemFormImageLabel');
+const itemFormImagePreviewWrap = document.getElementById('itemFormImagePreviewWrap');
+const itemFormImagePreview = document.getElementById('itemFormImagePreview');
+const itemFormImageRemoveBtn = document.getElementById('itemFormImageRemoveBtn');
+const adminCategoryFilter = document.getElementById('adminCategoryFilter');
+const adminItemsList = document.getElementById('adminItemsList');
+
+function setImagePreview(dataUrl, fileName){
+  itemFormImage.value = dataUrl || '';
+  if (dataUrl) {
+    itemFormImagePreview.src = dataUrl;
+    itemFormImagePreviewWrap.classList.remove('js-hidden');
+    itemFormImageLabel.textContent = fileName || 'تم اختيار صورة';
+  } else {
+    itemFormImagePreviewWrap.classList.add('js-hidden');
+    itemFormImagePreview.src = '';
+    itemFormImageLabel.textContent = 'اضغط لرفع صورة (JPG / PNG)';
+  }
+}
+
+// Reads the chosen file, resizes/compresses it, and turns it into a
+// Base64 data URL that's small enough to store directly in the
+// Firestore document. Stored in `itemFormImage` (hidden input) and
+// previewed immediately — no network call needed at this step.
+itemFormImageFile.addEventListener('change', async () => {
+  const file = itemFormImageFile.files && itemFormImageFile.files[0];
+  if (!file) return;
+  if (!file.type.startsWith('image/')) {
+    showToast('الرجاء اختيار ملف صورة صالح');
+    itemFormImageFile.value = '';
+    return;
+  }
+  try {
+    itemFormImageLabel.textContent = 'جارِ تجهيز الصورة…';
+    const dataUrl = await compressImageFile(file);
+    setImagePreview(dataUrl, file.name);
+  } catch (err) {
+    console.error('Image processing failed:', err);
+    showToast('تعذّرت معالجة الصورة، جرّب صورة تانية');
+    itemFormImageFile.value = '';
+    setImagePreview('');
+  }
+});
+
+itemFormImageRemoveBtn.addEventListener('click', () => {
+  itemFormImageFile.value = '';
+  setImagePreview('');
+});
+
+function populateCategorySelects(){
+  const opts = CATEGORIES.map(c => `<option value="${c.id}">${c.name}</option>`).join('');
+  itemFormCategory.innerHTML = opts;
+  adminCategoryFilter.innerHTML = `<option value="all">كل التصنيفات</option>` + opts;
+}
+
+async function openAdminPanel(){
+  populateCategorySelects();
+  resetItemForm();
+  await renderAdminItemsList();
+  adminPanel.classList.remove('js-hidden');
+}
+
+function resetItemForm(){
+  editingItemId = null;
+  itemFormTitle.textContent = 'إضافة عنصر جديد';
+  itemFormId.value = '';
+  itemForm.reset();
+  itemFormImageFile.value = '';
+  setImagePreview('');
+}
+document.getElementById('itemFormResetBtn').addEventListener('click', resetItemForm);
+
+adminCategoryFilter.addEventListener('change', renderAdminItemsList);
+
+async function renderAdminItemsList(){
+  const items = await MenuAPI.getItems();
+  const filter = adminCategoryFilter.value || 'all';
+  const filtered = filter === 'all' ? items : items.filter(i => i.category === filter);
+  const catName = id => CATEGORIES.find(c => c.id === id)?.name || id;
+
+  if (filtered.length === 0) {
+    adminItemsList.innerHTML = `<p class="text-sm text-gold-600 text-center py-8">لا توجد عناصر</p>`;
+    return;
+  }
+
+  adminItemsList.innerHTML = filtered.map(item => `
+    <div class="flex items-center gap-3 bg-white/50 border border-gold-300/30 rounded-xl p-3">
+      <div class="w-16 h-12 rounded-lg overflow-hidden shrink-0 img-placeholder flex items-center justify-center">
+        ${item.image ? `<img src="${escapeHtml(item.image)}" class="w-full h-full object-cover">` : icon('image', 'text-gold-500')}
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="font-semibold text-[#3B2A17] truncate">${escapeHtml(item.name)}</p>
+        <p class="text-xs text-gold-600">${catName(item.category)} · ${formatPrice(item.price)} ل.س</p>
+      </div>
+      <button data-edit="${item.id}" class="w-8 h-8 rounded-full border border-gold-300 flex items-center justify-center hover:bg-gold-100/60" title="تعديل">
+        ${icon('pen', 'text-xs')}
+      </button>
+      <button data-del="${item.id}" class="w-8 h-8 rounded-full border border-red-300 text-red-600 flex items-center justify-center hover:bg-red-50" title="حذف">
+        ${icon('trash', 'text-xs')}
+      </button>
+    </div>
+  `).join('');
+
+  adminItemsList.querySelectorAll('[data-edit]').forEach(btn =>
+    btn.addEventListener('click', () => startEditItem(btn.dataset.edit)));
+  adminItemsList.querySelectorAll('[data-del]').forEach(btn =>
+    btn.addEventListener('click', () => deleteItemConfirm(btn.dataset.del)));
+}
+
+async function startEditItem(id){
+  const items = await MenuAPI.getItems();
+  const item = items.find(i => i.id === id);
+  if (!item) return;
+  editingItemId = id;
+  itemFormTitle.textContent = 'تعديل: ' + item.name;
+  itemFormId.value = item.id;
+  itemFormName.value = item.name;
+  itemFormPrice.value = item.price;
+  itemFormCategory.value = item.category;
+  itemFormImageFile.value = '';
+  setImagePreview(item.image || '');
+  itemFormName.focus();
+}
+
+async function deleteItemConfirm(id){
+  const items = await MenuAPI.getItems();
+  const item = items.find(i => i.id === id);
+  if (!item) return;
+  if (!confirm(`هل تريد حذف "${item.name}" من القائمة؟`)) return;
+  await MenuAPI.deleteItem(id);
+  await renderAdminItemsList();
+  await renderMenu();
+  showToast('تم حذف الصنف');
+}
+
+itemForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name = itemFormName.value.trim();
+  const price = Number(itemFormPrice.value);
+  if (!name || !(price >= 0)) return;
+
+  const submitBtn = itemForm.querySelector('button[type="submit"]');
+  const submitBtnOriginalHtml = submitBtn.innerHTML;
+
+  try {
+    const payload = {
+      name,
+      price,
+      category: itemFormCategory.value,
+      image: itemFormImage.value,
+    };
+
+    if (editingItemId) {
+      await MenuAPI.updateItem(editingItemId, payload);
+      showToast('تم تحديث الصنف');
+    } else {
+      await MenuAPI.addItem(payload);
+      showToast('تمت إضافة الصنف');
+    }
+
+    resetItemForm();
+    await renderAdminItemsList();
+    await renderMenu();
+  } catch (err) {
+    console.error('Save failed:', err);
+    showToast('تعذّر الحفظ — تحقق من الاتصال وحاول مجدداً');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = submitBtnOriginalHtml;
+  }
+});
+
+/* ---------------------------------------------------------------
+   INIT
+------------------------------------------------------------------ */
+(async function init(){
+  renderCategoryNav();
+  await renderMenu();
+  await renderCart();
+})();
+</script>
+</body>
+</html>
