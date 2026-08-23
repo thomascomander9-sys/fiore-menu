@@ -351,10 +351,11 @@
 
         <div class="mt-4 bg-gold-100/40 border border-gold-300/40 rounded-xl p-4 text-xs text-gold-700 leading-relaxed">
           <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><circle cx="12" cy="8" r="0.9" fill="currentColor" stroke="none"/></svg></span>
-          هذه اللوحة متصلة بقاعدة بيانات Firebase Firestore — أي إضافة أو تعديل أو حذف لصنف يُحفظ مباشرة على
-          السحابة ويظهر لكل الزبائن فوراً عند تحديث الصفحة. الصور تُصغَّر وتُضغط تلقائياً قبل الحفظ لتبقى ضمن الخطة
-          المجانية — إذا احتجت لاحقاً صوراً بجودة أعلى أو عدد أصناف كبير جداً، يمكن الانتقال إلى
-          <code class="bg-white/60 px-1 rounded">Firebase Storage</code> (يتطلب ترقية خطة الفوترة).
+          هذه اللوحة متصلة الآن بقاعدة بيانات Firebase Firestore — أي إضافة أو تعديل أو حذف لصنف يُحفظ مباشرة على
+          السحابة ويظهر لكل الزبائن فوراً عند تحديث الصفحة. أي صورة تُرفع تُضغَط وتُصغَّر تلقائياً على الجهاز
+          قبل الحفظ (لتبقى دائماً صغيرة الحجم مهما كان عدد الأصناف)، ثم تُخزَّن كنص Base64 داخل بيانات الصنف —
+          لا حاجة حالياً لأي خدمة تخزين خارجية. عند نمو المنيو لعدد كبير جداً من الأصناف ذات الصور مستقبلاً،
+          يمكن الانتقال لاحقاً إلى <code class="bg-white/60 px-1 rounded">Firebase Storage</code> لأداء أفضل.
         </div>
       </div>
 
@@ -416,38 +417,6 @@ const fbApp = initializeApp(firebaseConfig);
 const db = getFirestore(fbApp);
 const menuItemsCol = collection(db, "menuItems");
 
-// Images are stored as compressed Base64 data URLs directly inside the
-// Firestore document (no Firebase Storage — that tier needs a paid
-// "Blaze" plan). To stay well under Firestore's 1MB-per-document limit
-// and keep the menu loading fast, every uploaded image is resized down
-// and re-compressed as a JPEG before it's saved.
-function compressImageFile(file, maxDim = 900, quality = 0.72){
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    const reader = new FileReader();
-    reader.onerror = () => reject(new Error('تعذّرت قراءة الملف'));
-    reader.onload = () => {
-      img.onerror = () => reject(new Error('تعذّرت معالجة الصورة'));
-      img.onload = () => {
-        let { width, height } = img;
-        if (width > maxDim || height > maxDim) {
-          const scale = maxDim / Math.max(width, height);
-          width = Math.round(width * scale);
-          height = Math.round(height * scale);
-        }
-        const canvas = document.createElement('canvas');
-        canvas.width = width;
-        canvas.height = height;
-        canvas.getContext('2d').drawImage(img, 0, 0, width, height);
-        resolve(canvas.toDataURL('image/jpeg', quality));
-      };
-      img.src = reader.result;
-    };
-    reader.readAsDataURL(file);
-  });
-}
-
-
 // Inline SVG icon set — used instead of an icon font so icons never
 // break due to a blocked/slow CDN. Each entry is the inner markup of
 // an <svg viewBox="0 0 24 24"> (stroke styling comes from the shared
@@ -465,6 +434,7 @@ const ICONS = {
   image:     '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-3-3-6 6"/>',
   bag:       '<path d="M6 8h12l-1 12a2 2 0 01-2 2H9a2 2 0 01-2-2L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/>',
   cold:      '<path d="M6 3h12l-1.2 16a2 2 0 01-2 1.8h-5.6a2 2 0 01-2-1.8L6 3z"/><path d="M6.5 8h11"/><path d="M9 11l1.5 1.5M9 12.5L10.5 11M14 14l1.5 1.5M14 15.5L15.5 14"/>',
+  icecream:  '<path d="M12 2a4 4 0 014 4 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4z"/><path d="M8.5 9.5a3.5 3.5 0 007 0"/><path d="M9 11l3 10 3-10"/>',
 };
 function icon(name, cls = ''){
   return `<span class="icon ${cls}"><svg viewBox="0 0 24 24">${ICONS[name] || ''}</svg></span>`;
@@ -476,12 +446,14 @@ const CONFIG = {
   // Number of tables shown in the table-number dropdown (1..N).
   TABLE_COUNT: 35,
   // WhatsApp number that receives orders, in full international
-  // format (no leading 0, no "+", no spaces).
+  // format (no leading 0, no "+", no spaces). Number supplied:
+  // +963 953 522 333.
   WHATSAPP_NUMBER: '963953522333',
 };
 
 const CATEGORIES = [
   { id: 'desserts',   name: 'حلويات',         icon: 'cake' },
+  { id: 'icecream',   name: 'آيس كريم',       icon: 'icecream' },
   { id: 'juices',     name: 'عصائر',          icon: 'juice' },
   { id: 'hot-drinks', name: 'مشروبات ساخنة',  icon: 'mug' },
   { id: 'cold-drinks', name: 'مشروبات باردة', icon: 'cold' },
@@ -500,6 +472,8 @@ let MENU_ITEMS = [
   { id: 'd3', category: 'desserts', name: 'كريب كراميل',    price: 500, image: '' },
   { id: 'd4', category: 'desserts', name: 'تشيز كيك',       price: 500, image: '' },
   { id: 'd5', category: 'desserts', name: 'بابل فيوري',     price: 500, image: '' },
+
+  // ---------- آيس كريم (فاضي — تُضاف من لوحة الإدارة) ----------
 
   // ---------- عصائر (240 each) ----------
   { id: 'j1',  category: 'juices', name: 'عصير برتقال',   price: 240, image: '' },
@@ -943,10 +917,54 @@ function setImagePreview(dataUrl, fileName){
   }
 }
 
-// Reads the chosen file, resizes/compresses it, and turns it into a
-// Base64 data URL that's small enough to store directly in the
-// Firestore document. Stored in `itemFormImage` (hidden input) and
-// previewed immediately — no network call needed at this step.
+// Resizes + compresses an uploaded image on-device before it is stored
+// as a Base64 string, so a single large photo (e.g. a raw phone camera
+// shot of several MB) never comes close to Firestore's 1MB-per-document
+// limit and the menu page stays fast to load as more items are added.
+// Caps the longest side at MAX_DIMENSION and re-encodes as JPEG,
+// stepping the quality down until the result fits under MAX_BYTES.
+function compressImageFile(file, { maxDimension = 1000, maxBytes = 220 * 1024 } = {}) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const objectUrl = URL.createObjectURL(file);
+    img.onload = () => {
+      URL.revokeObjectURL(objectUrl);
+      let { width, height } = img;
+      if (width > height && width > maxDimension) {
+        height = Math.round(height * (maxDimension / width));
+        width = maxDimension;
+      } else if (height > maxDimension) {
+        width = Math.round(width * (maxDimension / height));
+        height = maxDimension;
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+
+      let quality = 0.82;
+      let dataUrl = canvas.toDataURL('image/jpeg', quality);
+      // Rough Base64 -> byte size estimate; step quality down until it fits.
+      const estimateBytes = str => Math.round(str.length * 0.75);
+      while (estimateBytes(dataUrl) > maxBytes && quality > 0.35) {
+        quality -= 0.1;
+        dataUrl = canvas.toDataURL('image/jpeg', quality);
+      }
+      resolve(dataUrl);
+    };
+    img.onerror = () => {
+      URL.revokeObjectURL(objectUrl);
+      reject(new Error('تعذّرت قراءة الصورة'));
+    };
+    img.src = objectUrl;
+  });
+}
+
+// Reads the chosen file, compresses it (see compressImageFile above), and
+// stores the resulting small Base64 data URL so it can be previewed and
+// saved immediately without any backend. When Firebase Storage is
+// connected later, replace this with an upload call and store the
+// returned URL in `image` instead of the Base64 string.
 itemFormImageFile.addEventListener('change', async () => {
   const file = itemFormImageFile.files && itemFormImageFile.files[0];
   if (!file) return;
@@ -956,12 +974,11 @@ itemFormImageFile.addEventListener('change', async () => {
     return;
   }
   try {
-    itemFormImageLabel.textContent = 'جارِ تجهيز الصورة…';
-    const dataUrl = await compressImageFile(file);
-    setImagePreview(dataUrl, file.name);
+    itemFormImageLabel.textContent = 'جارٍ تجهيز الصورة...';
+    const compressedDataUrl = await compressImageFile(file);
+    setImagePreview(compressedDataUrl, file.name);
   } catch (err) {
-    console.error('Image processing failed:', err);
-    showToast('تعذّرت معالجة الصورة، جرّب صورة تانية');
+    showToast('تعذّر معالجة الصورة، حاولي صورة أخرى');
     itemFormImageFile.value = '';
     setImagePreview('');
   }
@@ -1060,39 +1077,25 @@ async function deleteItemConfirm(id){
 
 itemForm.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const name = itemFormName.value.trim();
-  const price = Number(itemFormPrice.value);
-  if (!name || !(price >= 0)) return;
+  const payload = {
+    name: itemFormName.value.trim(),
+    price: Number(itemFormPrice.value),
+    category: itemFormCategory.value,
+    image: itemFormImage.value,
+  };
+  if (!payload.name || !(payload.price >= 0)) return;
 
-  const submitBtn = itemForm.querySelector('button[type="submit"]');
-  const submitBtnOriginalHtml = submitBtn.innerHTML;
-
-  try {
-    const payload = {
-      name,
-      price,
-      category: itemFormCategory.value,
-      image: itemFormImage.value,
-    };
-
-    if (editingItemId) {
-      await MenuAPI.updateItem(editingItemId, payload);
-      showToast('تم تحديث الصنف');
-    } else {
-      await MenuAPI.addItem(payload);
-      showToast('تمت إضافة الصنف');
-    }
-
-    resetItemForm();
-    await renderAdminItemsList();
-    await renderMenu();
-  } catch (err) {
-    console.error('Save failed:', err);
-    showToast('تعذّر الحفظ — تحقق من الاتصال وحاول مجدداً');
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = submitBtnOriginalHtml;
+  if (editingItemId) {
+    await MenuAPI.updateItem(editingItemId, payload);
+    showToast('تم تحديث الصنف');
+  } else {
+    await MenuAPI.addItem(payload);
+    showToast('تمت إضافة الصنف');
   }
+
+  resetItemForm();
+  await renderAdminItemsList();
+  await renderMenu();
 });
 
 /* ---------------------------------------------------------------
